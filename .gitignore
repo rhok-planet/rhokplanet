@@ -1,0 +1,9 @@
+*.pyc
+dev*.db
+local_settings.py
+
+.Python
+*.egg
+
+docs/.build
+docs/_build
