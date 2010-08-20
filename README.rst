@@ -18,16 +18,29 @@ software installed and in your PATH:
 
 * PostGIS or Spatialite
 
-1. Create a virtualenv and activate it::
+#. Create a virtualenv and activate it::
 
   virtualenv rhok;
   cd rhok;
   source bin/activate;
 
-2. Clone the project::
+#. Clone the project::
 
   git clone git://github.com/rhok-planet/rockplanet.git
 
-3. Install the requirements::
+#. Install the requirements::
 
   pip install -r rockplanet/requirements.txt
+
+#. Create the database::
+
+  cd rockplanet;
+  python manage.py syncdb
+
+#. Run the development server::
+
+  python manage.py runserver
+
+#. Point your browser to::
+
+  http://localhost:8000/
