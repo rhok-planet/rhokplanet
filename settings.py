@@ -3,6 +3,13 @@
 import os.path
 import posixpath
 
+# needed for markupfield in anthill
+from docutils.core import publish_parts
+import markdown
+def render_rest(markup):
+    parts = publish_parts(source=markup, writer_name="html4css1")
+    return parts["fragment"]
+
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
@@ -127,6 +134,10 @@ INSTALLED_APPS = [
 
     #anthill related
     "anthill",
+    "anthill.people",
+    "anthill.events",
+    "anthill.projects",
+
     "tagging",
     "markupfield",
     "brainstorm",
@@ -144,6 +155,15 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
 }
+
+AUTH_PROFILE_MODULE = 'people.UserProfile'
+ANTHILL_ROLES = ['admin', 'user']
+ANTHILL_DEFAULT_MARKUP= 'ReST'
+
+MARKUP_FIELD_TYPES = (
+    ('markdown', markdown.markdown),
+    ('ReST','render_rest'),
+)
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

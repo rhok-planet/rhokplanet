@@ -3,6 +3,7 @@ django-tagging==0.3
 django-staticfiles==0.2.0
 django-debug-toolbar==0.8.3
 feedparser==4.1
+Markdown==2.0.3
 -e git://github.com/jamesturk/django-markupfield.git#egg=django-markupfield
 -e git://github.com/sunlightlabs/django-brainstorm.git#egg=django-brainstorm
 -e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
