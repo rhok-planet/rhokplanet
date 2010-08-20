@@ -157,7 +157,7 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 AUTH_PROFILE_MODULE = 'people.UserProfile'
-ANTHILL_ROLES = ['admin', 'user']
+ANTHILL_ROLES = (('user', ''), ('admin', ''))
 ANTHILL_DEFAULT_MARKUP= 'ReST'
 
 MARKUP_FIELD_TYPES = (
