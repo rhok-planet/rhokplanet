@@ -58,3 +58,7 @@ software installed and in your PATH:
 #. Point your browser to::
 
   http://localhost:8000/
+
+#. When deploying, make sure to read the documentation for django-staticfiles, especifically you will need to do something like this periodically:: 
+
+   python manage.py build_static -l
