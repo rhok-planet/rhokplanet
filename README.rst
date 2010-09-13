@@ -18,6 +18,16 @@ software installed and in your PATH:
 
 * PostGIS or Spatialite
 
+   Follow the GeoDjango install document::
+
+       http://docs.djangoproject.com/en/dev/ref/contrib/gis/install/
+
+  - If using postgis create your DB from the template database (if available):
+    createdb rhokplanet -T template_postgis
+    
+  - If using spatialite, use the init script in the sql folder:
+    spatialite dev.db < init_spatialite-2.3.sql
+
 #. Create a virtualenv and activate it::
 
   virtualenv rhok;
