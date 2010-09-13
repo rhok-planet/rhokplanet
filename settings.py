@@ -162,7 +162,7 @@ ANTHILL_DEFAULT_MARKUP= 'ReST'
 
 MARKUP_FIELD_TYPES = (
     ('markdown', markdown.markdown),
-    ('ReST','render_rest'),
+    ('ReST',render_rest),
 )
 
 # local_settings.py can be used to override environment-specific settings
