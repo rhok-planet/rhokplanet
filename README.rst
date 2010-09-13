@@ -45,7 +45,11 @@ software installed and in your PATH:
 #. Create the database::
 
   cd rockplanet;
-  python manage.py syncdb
+  # It is very important to leave user creation to the end, because the Profile model
+  # has a geometry column and that has to be created before the first user is created 
+  python manage.py syncdb --no-input
+  # Since you did not create it during syncdb, it is time to create the first superuser
+  python manage.py createsuperuser
 
 #. Run the development server::
 

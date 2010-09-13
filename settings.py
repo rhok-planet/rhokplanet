@@ -127,7 +127,8 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.humanize",
-    
+    "django.contrib.gis",
+
     # external
     "staticfiles",
     "debug_toolbar",
@@ -156,7 +157,7 @@ DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
 }
 
-AUTH_PROFILE_MODULE = 'people.UserProfile'
+AUTH_PROFILE_MODULE = 'people.Profile'
 ANTHILL_ROLES = (('user', ''), ('admin', ''))
 ANTHILL_DEFAULT_MARKUP= 'ReST'
 
