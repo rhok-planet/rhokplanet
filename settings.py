@@ -30,9 +30,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.contrib.gis.db.backends.spatialite", 
-        "NAME": os.path.join(PROJECT_ROOT, "dev.db"),    # Or path to database file if using sqlite3.
-        "USER": "",                             # Not used with sqlite3.
+        "ENGINE": "django.contrib.gis.db.backends.postgis", 
+        "NAME": 'rhok',#os.path.join(PROJECT_ROOT, "dev.db"),    # Or path to database file if using sqlite3.
+
+        "USER": "postgres",                             # Not used with sqlite3.
         "PASSWORD": "",                         # Not used with sqlite3.
         "HOST": "",                             # Set to empty string for localhost. Not used with sqlite3.
         "PORT": "",                             # Set to empty string for default. Not used with sqlite3.
@@ -64,6 +65,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, "site_media", "media")
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = "/media/"
+MEDIASYNC = {'BACKEND' : "mediasync.backends.dummy"}
 
 # Absolute path to the directory that holds static files like app media.
 # Example: "/home/media/media.lawrence.com/apps/"
@@ -143,8 +145,8 @@ INSTALLED_APPS = [
     "markupfield",
     "brainstorm",
     "feedinator",
-    
-    # project
+    "mediasync",
+    "rhok"
 ]
 
 FIXTURE_DIRS = [
@@ -165,6 +167,9 @@ MARKUP_FIELD_TYPES = (
     ('markdown', markdown.markdown),
     ('ReST',render_rest),
 )
+
+
+ANTHILL_GMAPS_KEY = "enter your gmaps key"
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

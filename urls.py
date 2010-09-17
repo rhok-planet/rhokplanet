@@ -11,6 +11,10 @@ urlpatterns = patterns("",
         "template": "homepage.html",
     }, name="home"),
     url(r"^admin/", include(admin.site.urls)),
+    url(r"^", include('anthill.people.urls')),
+    url(r"^", include('anthill.events.urls')),
+    url(r"^", include('anthill.projects.urls')),
+    url(r"^", include('rhok.urls')),
 )
 
 

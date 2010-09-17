@@ -9,3 +9,4 @@ docutils
 -e git://github.com/sunlightlabs/django-brainstorm.git#egg=django-brainstorm
 -e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
 -e git://github.com/rhok-planet/anthill.git#egg=anthill
+-e git://github.com/sunlightlabs/django-mediasync.git#egg=django-mediasync
